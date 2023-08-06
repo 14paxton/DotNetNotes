@@ -35,26 +35,42 @@ Table of contents
 
 ## [Install Scripts](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-install-script)
 
-```
 # Windows PowerShell
+
+```shell
 Invoke-WebRequest -Uri https://dot.net/v1/dotnet-install.ps1 -OutFile "$env:temp/dotnet-install.ps1"; powershell -executionpolicy bypass "$env:temp/dotnet-install.ps1"
+```
 
 # PowerShell Core
+
+```shell
 Invoke-WebRequest -Uri https://dot.net/v1/dotnet-install.ps1 -OutFile "$env:temp/dotnet-install.ps1"; pwsh "$env:temp/dotnet-install.ps1"
+```
 
 # Shell
+
+```shell
 wget https://dot.net/v1/dotnet-install.sh && chmod +x ./dotnet-install.sh && sudo ./dotnet-install.sh
+```
 
 # Apt
+
+```shell
 sudo apt update
 sudo apt install dotnet6
 
+```
+
 # WinGet
+
+```shell
 winget install Microsoft.DotNet.SDK.6
+```
 
 # Chocolatey
-choco upgrade dotnet-sdk
 
+```shell
+choco upgrade dotnet-sdk
 ```
 
 - [Self Updating Plans](https://github.com/dotnet/sdk/issues/23700)
